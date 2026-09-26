@@ -1,0 +1,6 @@
+# Core testing framework
+pytest==8.3.4
+selenium==4.27.1
+
+# WebDriver management (auto-downloads correct driver version)
+webdriver-manager==4.0.2
