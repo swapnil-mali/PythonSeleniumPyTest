@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# pytest / test artifacts
+.pytest_cache/
+reports/
+logs/
+allure-results/
+.coverage
+htmlcov/
+
+# Env / secrets
+.env
+config/environments/*.local.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Selenium
+geckodriver.log
+chromedriver.log
