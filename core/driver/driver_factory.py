@@ -1,7 +1,7 @@
 from selenium import webdriver
 import core.driver.browser_options as Options
 
-class GetDriver:
+class DriverFactory:
     def __init__(self, browser = 'chrome'):
         self.browser = browser.lower()
 
@@ -18,4 +18,7 @@ class GetDriver:
 
     def _get_firefox_driver(self):
         return webdriver.Firefox()
+
+    def load_application():
+        pass
 

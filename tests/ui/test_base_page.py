@@ -1,10 +1,10 @@
-import time
-from selenium.webdriver.common.by import By
+import pytest
+from pages.base_page import BasePage
 
-def test_base_page_loads(webdriver):
-    webdriver.get("https://www.saucedemo.com/")
-    webdriver.maximize_window()
-    time.sleep(1)
-    element = webdriver.find_element(By.ID, "user-name")
-    assert element.is_enabled(), "Element is not enabled"
-    time.sleep(2)
+@pytest.mark.ui
+@pytest.mark.smoke
+def test_base_page_loads(web_driver):
+    base_page = BasePage(web_driver)
+    base_page.goto_base_page()
+    assert base_page.wait_for_element_visible(), "Failed to load base page"
+    assert base_page.is_base_root_enabled(), "Element is not enabled"
