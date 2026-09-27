@@ -11,4 +11,3 @@ def web_driver(request):
     yield driver
     print("\nTest Teardown")
     driver.quit()
-
